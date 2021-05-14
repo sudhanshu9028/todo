@@ -50,7 +50,7 @@ function App() {
         <Switch>
           <Route
             exact
-            path="/"
+            path="/todo"
             render={() => {
               return (
                 <>
@@ -60,7 +60,7 @@ function App() {
               );
             }}
           ></Route>
-          <Route exact path="/about">
+          <Route exact path="/todo/about">
             <About />
           </Route>
         </Switch>
