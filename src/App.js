@@ -50,7 +50,7 @@ function App() {
         <Switch>
           <Route
             exact
-            path="/todo"
+            path="/todo/"
             render={() => {
               return (
                 <>
