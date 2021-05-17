@@ -3,9 +3,7 @@ import Header from "./Mycomp/header";
 import { Todos } from "./Mycomp/Todos";
 import { AddTodo } from "./Mycomp/AddTodo";
 import { Footer } from "./Mycomp/Footer";
-import { About } from "./Mycomp/About";
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   let initTodo;
@@ -45,27 +43,10 @@ function App() {
   }, [todos]);
   return (
     <>
-      <Router>
-        <Header title="Todos-List" />
-        <Switch>
-          <Route
-            exact
-            path="/todo/"
-            render={() => {
-              return (
-                <>
-                  <AddTodo addTodo={addTodo} />
-                  <Todos todos={todos} onDelete={onDelete} />
-                </>
-              );
-            }}
-          ></Route>
-          <Route exact path="/about">
-            <About />
-          </Route>
-        </Switch>
-        <Footer />
-      </Router>
+      <Header />
+      <AddTodo addTodo={addTodo} />
+      <Todos todos={todos} onDelete={onDelete} />
+      <Footer />
     </>
   );
 }
